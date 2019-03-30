@@ -1,8 +1,14 @@
 server:
-  port: 9090
+  port: 9092
 spring:
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/smallprogram
+    password: 123456
+    url: jdbc:mysql://localhost:3306/smallProgram
     driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.commons.dbcp2.BasicDataSource
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update

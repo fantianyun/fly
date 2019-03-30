@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-02-22T13:20:18.483+0000",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Required String parameter 'code' is not present",
+  "path": "/user/getUser"
+}

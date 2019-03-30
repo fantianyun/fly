@@ -1,0 +1,99 @@
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-23T091109.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-23T091059.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-23T091034.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-23T084158.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-23T083329.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-22T095501.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-22T095347.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
+
+<> 2019-02-22T095101.200.json
+
+###
+
+GET http://localhost:9090/user/getUser?code=1245
+
+<> 2019-02-22T092143.200.json
+
+###
+
+GET http://localhost:9090/user/getUser
+code: 1111
+
+<> 2019-02-22T092045.400.json
+
+###
+
+GET http://localhost:9090/user/getUser
+
+<> 2019-02-22T092018.400.json
+
+###
+
+GET http://localhost:9090/user/
+
+<> 2019-02-22T091949.200.json
+
+###
+
+GET http://localhost:9090/user/
+
+<> 2019-02-22T091901.404.json
+
+###
+
+GET http://localhost:9090/user/
+
+<> 2019-02-22T091757.404.json
+
+###
+
+GET http://localhost:9090/user/getUser
+code: 1111
+
+<> 2019-02-22T091739.404.json
+
+###
+
+GET http://localhost:9090/user/getUserinfo
+code: 1111
+
+<> 2019-02-22T091714.404.json
+
+###
+

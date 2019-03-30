@@ -8,6 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <java.version>1.8</java.version>
+        <mysql.version>5.1.47</mysql.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,14 +26,40 @@
             <artifactId>spring-boot-starter-jooq</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+            <version>4.5.7</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.7</version>
+        </dependency>
+
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.47</version>
+            <version>${mysql.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
         </dependency>
 
         <dependency>
@@ -56,7 +83,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -66,21 +100,29 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>gensrc/main/java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
 
             <plugin>
-
-                <!-- Specify the maven code generator plugin -->
-                <!-- Use org.jooq            for the Open Source Edition
-                         org.jooq.pro        for commercial editions,
-                         org.jooq.pro-java-6 for commercial editions with Java 6 support,
-                         org.jooq.trial      for the free trial edition
-
-                     Note: Only the Open Source Edition is hosted on Maven Central.
-                           Import the others manually from your distribution -->
                 <groupId>org.jooq</groupId>
                 <artifactId>jooq-codegen-maven</artifactId>
-                <version>3.11.9</version>
-
+                <version>${jooq.version}</version>
                 <!-- The plugin should hook into the generate goal -->
                 <executions>
                     <execution>
@@ -90,42 +132,60 @@
                     </execution>
                 </executions>
 
-                <!-- Manage the plugin's dependency. In this example, we'll use a PostgreSQL database -->
+                <!-- Manage the plugin's dependency. In this example, we'll use a MySQL database -->
                 <dependencies>
+                    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.47</version>
+                        <version>${mysql.version}</version>
                     </dependency>
                 </dependencies>
 
                 <!-- Specify the plugin configuration.
                      The configuration format is the same as for the standalone code generator -->
                 <configuration>
-
-                    <!-- JDBC connection parameters -->
+                    <!--可选值 TRACE DEBUG INFO WARN ERROR FATAL-->
+                    <logging>DEBUG</logging>
                     <jdbc>
                         <driver>com.mysql.jdbc.Driver</driver>
-                        <url>jdbc:mysql://localhost:3306/smallprogram</url>
+                        <url>jdbc:mysql://localhost:3306/smallProgram</url>
                         <user>root</user>
-                        <password>root</password>
+                        <password>123456</password>
                     </jdbc>
-
-                    <!-- Generator parameters -->
                     <generator>
                         <database>
                             <name>org.jooq.meta.mysql.MySQLDatabase</name>
                             <includes>.*</includes>
-                            <excludes></excludes>
-                            <!-- In case your database supports catalogs, e.g. SQL Server:
-                            <inputCatalog>public</inputCatalog>
-                              -->
+                            <!--<excludes>tmp_.*|wf_.*|rpt_.*</excludes>-->
+                            <!--测试-->
                             <inputSchema>smallprogram</inputSchema>
                         </database>
+                        <strategy>
+                            <matchers>
+                                <tables>
+                                    <table>
+                                        <expression>^(.*)$</expression>
+                                        <tableClass>
+                                            <transform>PASCAL</transform>
+                                            <expression>$1</expression>
+                                        </tableClass>
+                                        <recordClass>
+                                            <transform>PASCAL</transform>
+                                            <expression>$1_P_O</expression>
+                                        </recordClass>
+                                    </table>
+                                </tables>
+                            </matchers>
+                        </strategy>
                         <target>
-                            <packageName>com.fty.jooq.codegen</packageName>
-                            <directory>target/generated-sources/jooq</directory>
+                            <packageName>com.fty.jooq.domain</packageName>
+                            <directory>${basedir}/gensrc/main/java</directory>
                         </target>
+                        <generate>
+                            <records>false</records>
+                            <javaTimeTypes>true</javaTimeTypes>
+                        </generate>
                     </generator>
                 </configuration>
             </plugin>
