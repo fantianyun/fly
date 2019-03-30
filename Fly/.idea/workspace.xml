@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c941fb-fdeb-4638-ba34-1801da7799ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/config/DataSourceShow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/config/WxConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/controller/ClassController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/controller/JpaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/converter/SexConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/entity/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/enumeration/SexEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/service/ClassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/service/JdbcTmplUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/service/impl/JdbcTmplUserServiceimpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fty/service/jpaInterface/JpaUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/Calzone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/JpaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/Pizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/SubPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/UtilityClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/fty/service.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fty/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fty/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fty/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fty/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fty/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fty/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/fty/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/fty/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Fly-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fty/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/controller/HelloController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fty/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/DefaultCatalog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Indexes$Indexes0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Indexes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Keys$Identities0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Keys$UniqueKeys0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Keys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Smallprogram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/Tables.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/tables/Blog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/tables/MallAd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/tables/records/BlogRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fty/jooq/codegen/tables/records/MallAdRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/DefaultCatalog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/Indexes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/Keys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/Smallprogram.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/Tables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/tables/Blog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/tables/MallAd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/tables/records/BlogRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/jooq/com/fty/jooq/codegen/tables/records/MallAdRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.fty.AppTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.fty.AppTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/fty/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/fty/AppTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="83c941fb-fdeb-4638-ba34-1801da7799ba" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -765,7 +702,7 @@
       <workItem from="1553599442677" duration="8812000" />
       <workItem from="1553687899180" duration="6085000" />
       <workItem from="1553772590489" duration="8841000" />
-      <workItem from="1553930506647" duration="6324000" />
+      <workItem from="1553930506647" duration="6609000" />
     </task>
     <servers />
   </component>
@@ -802,7 +739,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118503000" />
+    <option name="totallyTimeSpent" value="118788000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
