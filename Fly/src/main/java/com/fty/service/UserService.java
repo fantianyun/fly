@@ -7,7 +7,6 @@ import org.apache.http.client.fluent.Request;
 import org.jooq.DSLContext;
 import org.jooq.Record;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

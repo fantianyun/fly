@@ -4,11 +4,27 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/smallProgram
+    url: jdbc:mysql://localhost:3306/smallProgram?useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.jdbc.Driver
     type: org.apache.commons.dbcp2.BasicDataSource
-  jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
-    show-sql: true
-    hibernate:
-      ddl-auto: update
+    tomcat:
+      max-idle: 10
+      max-active: 50
+      max-wait: 10000
+      initial-size: 5
+
+mybatis:
+  mapper-locations: classpath*:com/fty/mapper/*.xml
+  type-aliases-package: com.fty.entity
+  type-handlers-package: com.fty.typeHandler
+logging:
+  level:
+    root: debug
+    org.springframework.web: warn
+    org.mybatis: debug
+
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update

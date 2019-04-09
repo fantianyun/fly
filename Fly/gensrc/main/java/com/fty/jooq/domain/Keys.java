@@ -6,6 +6,7 @@ package com.fty.jooq.domain;
 
 import com.fty.jooq.domain.tables.MallClass;
 import com.fty.jooq.domain.tables.MallUser;
+import com.fty.jooq.domain.tables.TUser;
 
 import javax.annotation.Generated;
 
@@ -39,6 +40,7 @@ public class Keys {
 
     public static final UniqueKey<Record> KEY_MALL_CLASS_PRIMARY = UniqueKeys0.KEY_MALL_CLASS_PRIMARY;
     public static final UniqueKey<Record> KEY_MALL_USER_PRIMARY = UniqueKeys0.KEY_MALL_USER_PRIMARY;
+    public static final UniqueKey<Record> KEY_T_USER_PRIMARY = UniqueKeys0.KEY_T_USER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -52,5 +54,6 @@ public class Keys {
     private static class UniqueKeys0 {
         public static final UniqueKey<Record> KEY_MALL_CLASS_PRIMARY = Internal.createUniqueKey(MallClass.MALL_CLASS, "KEY_mall_class_PRIMARY", MallClass.MALL_CLASS.CLASS_ID);
         public static final UniqueKey<Record> KEY_MALL_USER_PRIMARY = Internal.createUniqueKey(MallUser.MALL_USER, "KEY_mall_user_PRIMARY", MallUser.MALL_USER.USER_ID);
+        public static final UniqueKey<Record> KEY_T_USER_PRIMARY = Internal.createUniqueKey(TUser.T_USER, "KEY_t_user_PRIMARY", TUser.T_USER.ID);
     }
 }

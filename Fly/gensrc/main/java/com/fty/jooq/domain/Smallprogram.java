@@ -6,6 +6,7 @@ package com.fty.jooq.domain;
 
 import com.fty.jooq.domain.tables.MallClass;
 import com.fty.jooq.domain.tables.MallUser;
+import com.fty.jooq.domain.tables.TUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +32,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Smallprogram extends SchemaImpl {
 
-    private static final long serialVersionUID = 1755043245;
+    private static final long serialVersionUID = -751690773;
 
     /**
      * The reference instance of <code>smallprogram</code>
@@ -47,6 +48,11 @@ public class Smallprogram extends SchemaImpl {
      * The table <code>smallprogram.mall_user</code>.
      */
     public final MallUser MALL_USER = com.fty.jooq.domain.tables.MallUser.MALL_USER;
+
+    /**
+     * The table <code>smallprogram.t_user</code>.
+     */
+    public final TUser T_USER = com.fty.jooq.domain.tables.TUser.T_USER;
 
     /**
      * No further instances allowed
@@ -74,6 +80,7 @@ public class Smallprogram extends SchemaImpl {
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
             MallClass.MALL_CLASS,
-            MallUser.MALL_USER);
+            MallUser.MALL_USER,
+            TUser.T_USER);
     }
 }

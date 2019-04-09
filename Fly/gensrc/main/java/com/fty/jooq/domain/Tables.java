@@ -6,6 +6,7 @@ package com.fty.jooq.domain;
 
 import com.fty.jooq.domain.tables.MallClass;
 import com.fty.jooq.domain.tables.MallUser;
+import com.fty.jooq.domain.tables.TUser;
 
 import javax.annotation.Generated;
 
@@ -32,4 +33,9 @@ public class Tables {
      * The table <code>smallprogram.mall_user</code>.
      */
     public static final MallUser MALL_USER = com.fty.jooq.domain.tables.MallUser.MALL_USER;
+
+    /**
+     * The table <code>smallprogram.t_user</code>.
+     */
+    public static final TUser T_USER = com.fty.jooq.domain.tables.TUser.T_USER;
 }

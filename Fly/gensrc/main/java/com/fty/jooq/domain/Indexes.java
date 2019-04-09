@@ -6,6 +6,7 @@ package com.fty.jooq.domain;
 
 import com.fty.jooq.domain.tables.MallClass;
 import com.fty.jooq.domain.tables.MallUser;
+import com.fty.jooq.domain.tables.TUser;
 
 import javax.annotation.Generated;
 
@@ -33,6 +34,7 @@ public class Indexes {
 
     public static final Index MALL_CLASS_PRIMARY = Indexes0.MALL_CLASS_PRIMARY;
     public static final Index MALL_USER_PRIMARY = Indexes0.MALL_USER_PRIMARY;
+    public static final Index T_USER_PRIMARY = Indexes0.T_USER_PRIMARY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -41,5 +43,6 @@ public class Indexes {
     private static class Indexes0 {
         public static Index MALL_CLASS_PRIMARY = Internal.createIndex("PRIMARY", MallClass.MALL_CLASS, new OrderField[] { MallClass.MALL_CLASS.CLASS_ID }, true);
         public static Index MALL_USER_PRIMARY = Internal.createIndex("PRIMARY", MallUser.MALL_USER, new OrderField[] { MallUser.MALL_USER.USER_ID }, true);
+        public static Index T_USER_PRIMARY = Internal.createIndex("PRIMARY", TUser.T_USER, new OrderField[] { TUser.T_USER.ID }, true);
     }
 }

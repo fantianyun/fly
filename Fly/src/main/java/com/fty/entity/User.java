@@ -1,24 +1,18 @@
 package com.fty.entity;
 
-import com.fty.converter.SexConverter;
 import com.fty.enumeration.SexEnum;
+import org.apache.ibatis.type.Alias;
 
-import javax.persistence.*;
 import java.io.Serializable;
-
-@Table(name = "t_user")
-@Entity(name = "User")
+@Alias(value = "user")
 public class User implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
 
-    @Column(name = "user_name")
     private String userName;
 
-    @Convert(converter = SexConverter.class)
     private SexEnum Sex;
-    @Column(name = "note")
+
     private String note;
 
     public long getId() {

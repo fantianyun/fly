@@ -1,6 +1,5 @@
 package com.fty;
 import com.fty.Calzone.Builder;
-import com.fty.service.jpaInterface.JpaUserRepository;
 import org.jooq.DSLContext;
 import org.jooq.User;
 import org.junit.Test;
