@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import redis.clients.jedis.Jedis;
 
 import java.io.*;
 import java.nio.Buffer;
@@ -69,6 +70,13 @@ public class AppTest {
         public boolean equals(Object o) {
             return o instanceof CaseInsensitiveString && ((CaseInsensitiveString) o).s.equalsIgnoreCase(s);
         }
+    }
+    @Test
+    public void  testRedis(){
+        Jedis jedis = new Jedis("apptest.pzfresh.com");
+        jedis.auth("Pzfresh2019");
+        String value = jedis.get("foo");
+        System.out.println(value);
     }
 
 }

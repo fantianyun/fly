@@ -9,3 +9,18 @@ http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
 
 ###
 
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123@com",
+    "size" : 2555555555555555555555555555,
+    "date" : "2019-05-26"
+
+}
+
+###
+http://localhost:9092/pdfview/download
+
+###

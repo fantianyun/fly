@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,4 +49,17 @@ public class App {
         System.out.println("1111111111111111111111111111111111111111111");
         System.out.println(platformTransactionManager.getClass().getName());
     }
+    @Autowired
+    private RedisTemplate redisTemplate = null;
+    @PostConstruct
+    public  void  init(){
+        initRedisTemplate();
+    }
+    public void initRedisTemplate(){
+        RedisSerializer stringRedisSerializer = redisTemplate.getStringSerializer();
+        redisTemplate.setKeySerializer(stringRedisSerializer);
+        redisTemplate.setHashKeySerializer(stringRedisSerializer);
+    }
+
+
 }

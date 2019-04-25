@@ -20,4 +20,5 @@ public class UserController {
         Map<String, Object> result = userService.code2session(code);
         return ResponseEntity.ok(result);
     }
+
 }

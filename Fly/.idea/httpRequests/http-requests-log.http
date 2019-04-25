@@ -1,3 +1,306 @@
+GET http://localhost:9092/pdfview/download
+
+<> 2019-04-25T081812.200.txt
+
+###
+
+GET http://localhost:9092/pdfview/download
+
+<> 2019-04-25T081502.500.json
+
+###
+
+GET http://localhost:9092/pdfView/download
+
+<> 2019-04-25T081431.404.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123@com",
+    "size" : 2555555555555555555555555555,
+    "date" : "2019-05-26"
+
+}
+
+<> 2019-04-23T080157.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 2555555555555555555555555555,
+    "date" : "2019-05-26"
+
+}
+
+<> 2019-04-23T080145.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 2555555555555555555555555555,
+    "date" : "2019-01-26"
+
+}
+
+<> 2019-04-23T080139.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 2555555555555555555555555555,
+    "data" : "2019-01-26"
+
+}
+
+<> 2019-04-23T080125.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 2555555555555555555555555555
+    "data" : "2019-01-26"
+
+}
+
+<> 2019-04-23T080102.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 2555555555555555555555555555
+
+}
+
+<> 2019-04-23T080033.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 25
+
+}
+
+<> 2019-04-23T080014.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 10
+
+}
+
+<> 2019-04-23T080006.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com",
+    "size" : 50
+
+}
+
+<> 2019-04-23T075957.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com"
+}
+
+<> 2019-04-23T075853.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com"
+}
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com"
+}
+
+<> 2019-04-22T100637.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+parameters: id=1&email=123.com
+
+<> 2019-04-22T100630.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+parameters: id=1&email=123.com
+
+<> 2019-04-22T100614.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+
+{
+    "id":1,
+    "email":"123.com"
+}
+
+<> 2019-04-22T100542.200.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+parameters: id=1&email=123.com
+
+<> 2019-04-22T100109.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+request-params: id=1&email=123.com
+
+<> 2019-04-22T100052.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+body: id=1&email=123.com
+
+<> 2019-04-22T100030.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+data: id=1&email=123.com
+
+<> 2019-04-22T100020.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+id=1&email=123.com:
+
+<> 2019-04-22T100005.400.html
+
+###
+
+POST http://localhost:9092/valid/validate
+Content-Type: application/json
+{"id": 1,"email":"123.com"}
+
+<> 2019-04-22T095909.400.html
+
+###
+
+POST http://localhost:9092/valid/validate
+{"id": 1,"email":"123.com"}
+
+<> 2019-04-22T095508.400.html
+
+###
+
+POST http://localhost:9092/valid/validate
+body: {"id":1,"email":"123.com"}
+
+<> 2019-04-22T095446.400.json
+
+###
+
+POST http://localhost:9092/valid/validate
+data: {"id":1,"email":"123.com"}
+
+<> 2019-04-22T095433.400.json
+
+###
+
+GET http://localhost:9092/valid/validate
+data: {"id":1,"email":"123.com"}
+
+<> 2019-04-22T095405.400.json
+
+###
+
+GET http://localhost:9092/valid/validate?{"id":1,"email":"123.com"}=
+
+<> 2019-04-22T094417.400.json
+
+###
+
+GET http://localhost:9092/valid/validate?id=1&email=123.com
+
+<> 2019-04-22T094307.400.json
+
+###
+
+GET http://localhost:9092/valid/validate?id=1&email=123.com
+
+###
+
 GET http://localhost:9090/user/getUser?code=023qC2Ln1mfU8r0JWoJn1OMYKn1qC2L1
 
 <> 2019-02-23T091109.200.json

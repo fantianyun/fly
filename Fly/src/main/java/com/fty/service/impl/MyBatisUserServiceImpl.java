@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class MyBatisUserServiceImpl implements MyBatisUserService {
     @Autowired
@@ -23,6 +25,11 @@ public class MyBatisUserServiceImpl implements MyBatisUserService {
     @Transactional(isolation = Isolation.READ_COMMITTED,timeout = 1)
     public int insertUser(User user) {
         return mybatisUserDao.insertUser(user);
+    }
+
+    @Override
+    public List<User> getUsers(String userName, String note) {
+        return  mybatisUserDao.getUsers(userName,note);
     }
 
 }
