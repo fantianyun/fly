@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class PdfView extends AbstractPdfView {
 
-    final private PdfExportService pdfExportService;
+     private PdfExportService pdfExportService;
 
     public PdfView( PdfExportService pdfExportService) {
         this.pdfExportService = pdfExportService;

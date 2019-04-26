@@ -8,7 +8,7 @@
 		select id,user_name userName,sex,note from t_user where id = #{id}
 	</select>
 	<select id="getUsers" parameterType="String" resultType="user">
-		select id,user_name userName,sex,note from t_user where user_name= #{userName} and note = #{note}
+		select id,user_name userName,sex,note from t_user where user_name= #{userName} or note = #{note}
 	</select>
 	<insert id="insertUser" useGeneratedKeys="true" keyProperty="id" >
 		insert  into t_user(user_name,sex,note) value (#{userName},#{sex},#{note})

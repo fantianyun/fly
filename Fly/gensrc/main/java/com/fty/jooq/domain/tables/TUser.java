@@ -15,6 +15,7 @@ import javax.annotation.Generated;
 
 import org.jooq.Field;
 import org.jooq.ForeignKey;
+import org.jooq.Identity;
 import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Record;
@@ -39,7 +40,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TUser extends TableImpl<Record> {
 
-    private static final long serialVersionUID = 93193368;
+    private static final long serialVersionUID = 1147963618;
 
     /**
      * The reference instance of <code>smallprogram.t_user</code>
@@ -57,7 +58,7 @@ public class TUser extends TableImpl<Record> {
     /**
      * The column <code>smallprogram.t_user.id</code>.
      */
-    public final TableField<Record, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<Record, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).identity(true), this, "");
 
     /**
      * The column <code>smallprogram.t_user.user_name</code>. 用户名
@@ -121,6 +122,14 @@ public class TUser extends TableImpl<Record> {
     @Override
     public List<Index> getIndexes() {
         return Arrays.<Index>asList(Indexes.T_USER_PRIMARY);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Identity<Record, Integer> getIdentity() {
+        return Keys.IDENTITY_T_USER;
     }
 
     /**

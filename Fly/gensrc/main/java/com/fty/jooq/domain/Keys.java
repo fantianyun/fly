@@ -10,6 +10,7 @@ import com.fty.jooq.domain.tables.TUser;
 
 import javax.annotation.Generated;
 
+import org.jooq.Identity;
 import org.jooq.Record;
 import org.jooq.UniqueKey;
 import org.jooq.impl.Internal;
@@ -33,6 +34,7 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
+    public static final Identity<Record, Integer> IDENTITY_T_USER = Identities0.IDENTITY_T_USER;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
@@ -50,6 +52,10 @@ public class Keys {
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
     // -------------------------------------------------------------------------
+
+    private static class Identities0 {
+        public static Identity<Record, Integer> IDENTITY_T_USER = Internal.createIdentity(TUser.T_USER, TUser.T_USER.ID);
+    }
 
     private static class UniqueKeys0 {
         public static final UniqueKey<Record> KEY_MALL_CLASS_PRIMARY = Internal.createUniqueKey(MallClass.MALL_CLASS, "KEY_mall_class_PRIMARY", MallClass.MALL_CLASS.CLASS_ID);

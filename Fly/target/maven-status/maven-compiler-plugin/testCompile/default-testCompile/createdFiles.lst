@@ -2,10 +2,11 @@ com\fty\Calzone$Builder.class
 com\fty\UtilityClass.class
 com\fty\Calzone$1.class
 com\fty\Calzone.class
-com\fty\AppTest$CaseInsensitiveString.class
-com\fty\Pizza$Topping.class
+com\fty\RedisTest.class
 com\fty\SubPizza$Size.class
 com\fty\AppTest.class
+com\fty\AppTest$CaseInsensitiveString.class
+com\fty\Pizza$Topping.class
 com\fty\Pizza$Builder.class
 com\fty\SubPizza$Builder.class
 com\fty\Pizza.class
